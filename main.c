@@ -1,6 +1,11 @@
 #include<stdio.h>
 #include<libstack.h>
 
+/* xの値を表示する関数 */
+void print_x(int x) {
+    printf("the valule of x: %d\n");
+}
+
 void main() {
     struct cell * init=NULL;
     int x;
