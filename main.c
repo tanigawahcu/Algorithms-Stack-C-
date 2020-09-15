@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include<libstack.h>
+#include"libstack.h"
 
 /* xの値を表示する関数 */
 void print_x(int x) {
