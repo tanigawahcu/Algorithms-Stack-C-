@@ -1,3 +1,4 @@
+#include<stdio.h>
 #include<stdlib.h>
 #include"libstack.h"
 
@@ -32,4 +33,21 @@ struct cell *pop(struct cell *init) {
         printf("Error: Stack is empty.\n");
         exit(1);
     }
+}
+
+void printstack(struct cell *init) {
+    struct cell *cell;
+
+    printf("\n------------ start to print stack infomation -------------\n");
+    printf("the pointer value of init: %p\n\n", init);
+
+    cell = init;
+    while( cell != NULL ) {
+        printf("the pointer value of cell: %p\n", cell);
+        printf("the value of element: %d\n", cell->element);
+        printf("the pointer value of next: %p\n", cell->next);
+        printf("\n");
+        cell = cell->next;
+    }
+    printf("------------- end of print stack infomation --------------\n\n");
 }

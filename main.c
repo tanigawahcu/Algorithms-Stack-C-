@@ -3,10 +3,10 @@
 
 /* xの値を表示する関数 */
 void print_x(int x) {
-    printf("the valule of x: %d\n");
+    printf("the valule of x: %d\n", x);
 }
 
-void main() {
+int main() {
     struct cell * init=NULL;
     int x;
 
@@ -50,5 +50,5 @@ void main() {
     printstack(init);
 
     /* 終了 */
-    return;
+    return 0;
 }

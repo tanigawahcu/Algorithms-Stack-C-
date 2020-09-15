@@ -1,10 +1,12 @@
 LDLIBS := -lm
 CC := /usr/bin/gcc
+SRCS = main.c libstack.c
+HEADERS = libstack.h
+TARGET = stack-sample
 
-stack-sample:	main.o libstack.o
-
-main.o libstack.o:	libstack.h
+$(TARGET):	$(SRCS) $(HEADERS)
+	$(CC) $(LDLIBS) $(SRCS) -o $@
 
 clean:	
 	$(RM) *.o
-	$(RM) stack-sample
+	$(RM) $(TARGET)
